@@ -6,19 +6,33 @@ def mainListen():
         if "news" in x:
             if "india" in x:
                 playNewsIndia()
-                speak("Do you want me to do anything else?")
+                doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
+                os.system("play "+doyou+" tempo 1.1")
+                # speak("Do you want me to do anything else?")
             else:
                 playNews()
-                speak("Do you want me to do anything else?")
+                doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
+                os.system("play "+doyou+" tempo 1.1")
+                # speak("Do you want me to do anything else?")
 
         elif "exit" in x:
-            speak("Alright, Thank You for using this Voice Assistant, have a nice day.")
+            exit="Sounds/Alright-Thank-You-for-using-t1619638216.mp3"
+            os.system("play "+exit+" tempo 1.1")
+            # speak("Alright, Thank You for using this Voice Assistant, have a nice day.")
             break
 
         elif "describe yourself" in x:
-            speak("Myself Alina, Alexa's little sister.")
-            speak("How may i help you?")
+            alina="Sounds/Myself-Eleena-Alexas-little-1619638384.mp3"
+            os.system("play "+alina+" tempo 1.1")
+            # speak("Myself Alina, Alexa's little sister.")
+            hm="greetings/How-can-I-help-you1619639087.mp3"
+            os.system("play "+hm+" tempo 1.1")
+            # speak("How may I help you?")
 
         else:
-            speak("Sorry, I could not do that at this point of time")
-            speak("Do you want me to do anything else?")
+            icouldnot="Sounds/Sorry-I-could-not-do-that-at-1619638005.mp3"
+            os.system("play "+icouldnot+" tempo 1.1")
+            # speak("Sorry, I could not do that at this point of time, but I may get future updates")
+            doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
+            os.system("play "+doyou+" tempo 1.1")
+            # speak("Do you want me to do anything else?")

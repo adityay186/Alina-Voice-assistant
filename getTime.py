@@ -38,4 +38,3 @@ def getTime(x,y,z):
             val="Morning"
     if val=="Noon":
         speak("The time is "+" 12 "+" noon")
-getTime(12,0,"PM")
