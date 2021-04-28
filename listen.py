@@ -62,12 +62,13 @@ def listen():
                 file_start= "Google_Start.mp3"
                 os.system("mpg123 " + file_start)
                 print('I\'M LISTENING...')
-                audio = rec.listen(source, phrase_time_limit=2)
+                audio = rec.listen(source, phrase_time_limit=3)
             try:
                 text = rec.recognize_google(audio, language='en-US')
                 file_end= "Google_End.mp3"
                 os.system("mpg123 " + file_end)
                 x=text
+                print(text)
                 return text
             except:
                 speak('Sorry, I could not understand what you said.')
