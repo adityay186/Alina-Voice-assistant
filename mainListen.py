@@ -3,12 +3,15 @@ from news import *
 def mainListen():
     while True:
         x=listen()
-        if "news" in x:
+        if "top news" in x:
+            playNews()
+            speak("Do you want me to do anything else Sir?")
+        elif "news from India" in x:
             playNewsIndia()
-        else:
-            speak("Sorry, I could not do that at this point of time")
-        speak("Can I dop something else Sir?")
-        y=listen()
-        if "exit" in y:
+            speak("Do you want me to do anything else Sir?")
+        elif "exit" in x:
             speak("Alright Sir, Thank You for using this Voice Assistant, have a nice day. Good-Bye")
             break
+        else:
+            speak("Sorry, I could not do that at this point of time")
+            speak("Do you want me to do anything else Sir?")
