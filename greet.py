@@ -12,5 +12,5 @@ def greet():
     else:
         speak("Good Evening Sir !") 
   
-    speak("I am your Assistant")
+    speak("I am your Voice Assistant")
     speak("How may I help you?")
