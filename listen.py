@@ -68,10 +68,10 @@ def listen():
                 file_end= "Google_End.mp3"
                 os.system("mpg123 " + file_end)
                 x=text
-                print(text)
+                print("================================================================> USER SAID :    "+text)
                 return text
             except:
                 speak('Sorry, I could not understand what you said.')
-                speak("Do you want me to do anything else Sir?")
+                speak("Do you want me to do anything else?")
         else:
             break
