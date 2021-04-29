@@ -1,5 +1,6 @@
 from datetime import datetime
 import time
+import os
 now = datetime.now()
 dt_string = now.strftime("The date is :"+"%d/%m/%Y"+" and the time is: "+"%H:%M")
 print(dt_string)
@@ -8,9 +9,12 @@ from tts import speak
 
 def getDate_Time():
     val=None
-    h=date_time1 = time.strftime("%-I")
-    m=date_time2 = time.strftime("%M")
-    ampm=date_time3= time.strftime("%p")
+    # h=date_time1 = time.strftime("%-I")
+    # m=date_time2 = time.strftime("%M")
+    # ampm=date_time3= time.strftime("%p")
+    h=12
+    m=0
+    ampm="PM"
     if ampm=="PM":
         if int(h)==12 and int(m)==0:
             val="Noon"
