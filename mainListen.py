@@ -1,5 +1,10 @@
 from listen import *
 from news import *
+from getTime import *
+from getDate import getDate
+from dateandtime import getDate_Time
+from age import age
+from getLocation import getLocation
 def mainListen():
     while True:
         x=listen().lower()
@@ -21,6 +26,26 @@ def mainListen():
             # speak("Alright, Thank You for using this Voice Assistant, have a nice day.")
             break
 
+        elif "time" in x:
+            if "date" in x:
+                getDate_Time()
+                doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
+                os.system("play "+doyou+" tempo 1.1")
+            else:
+                getTime()
+                doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
+                os.system("play "+doyou+" tempo 1.1")
+        
+        elif "date" in x:
+                getDate()
+                doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
+                os.system("play "+doyou+" tempo 1.1")
+
+        elif "age" in x or "old" in x:
+            age()
+            doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
+            os.system("play "+doyou+" tempo 1.1")
+
         elif "describe yourself" in x:
             alina="Sounds/Myself-Eleena-Alexas-little-1619638384.mp3"
             os.system("play "+alina+" tempo 1.1")
@@ -28,6 +53,16 @@ def mainListen():
             hm="greetings/How-can-I-help-you1619639087.mp3"
             os.system("play "+hm+" tempo 1.1")
             # speak("How may I help you?")
+
+        elif "where" in x or "where am i" in x or "location" in x or "locate me" in x:
+            # speak("You are currently in "+getLocation()[0]+getLocation()[1])
+            # located="Sounds/You-are-currently-in1619697928.mp3"
+            # os.system("play "+located+" tempo 1.1")
+            # speak(getLocation()[0]+getLocation()[1])
+            located="Sounds/You-are-currently-in-Valsad-Gu1619698254.mp3"
+            os.system("play "+located+" tempo 1.1")
+            doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
+            os.system("play "+doyou+" tempo 1.1")
 
         else:
             icouldnot="Sounds/Sorry-I-could-not-do-that-at-1619638005.mp3"

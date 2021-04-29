@@ -1,15 +1,12 @@
-
+from datetime import datetime
 import time
-import datetime
-# get current time
-# date_time1 = time.strftime("%-I")
-# date_time2 = time.strftime("%M")
-# date_time3= time.strftime("%p")
-from tts import *
+now = datetime.now()
+dt_string = now.strftime("The date is :"+"%d/%m/%Y"+" and the time is: "+"%H:%M")
+print(dt_string)
+from tts import speak
 
-# print(date_time1,date_time2,date_time3)
 
-def getTime():
+def getDate_Time():
     val=None
     h=date_time1 = time.strftime("%-I")
     m=date_time2 = time.strftime("%M")
@@ -34,17 +31,15 @@ def getTime():
             val="Night"
         else:
             val="Morning"
-    strTime = time.strftime("%-I:%M")
-    print(strTime)
     if val=="Noon":
-        speak("The time is "+strTime+" in the noon")
+        speak(dt_string+" in the noon")
     elif val=="Afternoon":
-        speak("The time is "+strTime+" in the afternoon")
+        speak(dt_string+" in the afternoon")
     elif val=="Evening":
-        speak("The time is "+strTime+" in the evening")
+        speak(dt_string+" in the evening")
     elif val=="Night":
-        speak("The time is "+strTime+" at night")
+        speak(dt_string+" at night")
     elif val=="Mid-Night":
-        speak("The time is "+strTime+" at mid-night")
+        speak(dt_string+" at mid-night")
     elif val=="Morning":
-        speak("The time is "+strTime+" in the morning")
+        speak(dt_string+" in the morning")
