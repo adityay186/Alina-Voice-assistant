@@ -6,7 +6,11 @@ def getLocation():
         'accept': "application/json",
         'content-type': "application/json"
         }
-    response = requests.request("GET", url, headers=headers)
-    c=response.json()["city"]
-    s=response.json()["region_name"]
-    return c,s
+    try:
+        response = requests.request("GET", url, headers=headers)
+    except requests.exceptions.ConnectionError:
+        print("No Internet Connection")
+    else:
+        c=response.json()["city"]
+        s=response.json()["region_name"]
+        return c,s

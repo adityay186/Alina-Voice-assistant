@@ -3,7 +3,8 @@ import time
 import os
 now = datetime.now()
 dt_string = now.strftime("The date is :"+"%d/%m/%Y"+" and the time is: "+"%H:%M")
-print(dt_string)
+print(now.strftime("Date :"+ "%d/%m/%Y"))
+print(now.strftime("Time :"+ "%H:%M %p"))
 from tts import speak
 
 
