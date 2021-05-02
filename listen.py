@@ -65,7 +65,6 @@ def listen():
                 audio = rec.listen(source, phrase_time_limit=3)
             try:
                 text = rec.recognize_google(audio, language='en-US')
-                else:
                 file_end= "Google_End.mp3"
                 os.system("play "+file_end+" tempo 1.1")
                 x=text

@@ -1,0 +1,11 @@
+Features:
+
+1. News (Both from India and from Top News)
+
+2. Time & Date
+
+3. Age
+
+4. Describe yourself
+
+5. Location

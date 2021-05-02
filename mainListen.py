@@ -21,7 +21,7 @@ def mainListen():
                 os.system("play "+doyou+" tempo 1.1")
                 # speak("Do you want me to do anything else?")
 
-        elif "exit" in x:
+        elif "exit" in x or "no" in x or "no exit" in x:
             exit="Sounds/Alright-Thank-You-for-using-t1619638216.mp3"
             os.system("play "+exit+" tempo 1.1")
             # speak("Alright, Thank You for using this Voice Assistant, have a nice day.")
