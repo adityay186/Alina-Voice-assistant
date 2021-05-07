@@ -6,6 +6,7 @@ from dateandtime import getDate_Time
 from age import age
 from getLocation import getLocation
 import gtts
+from motion import motion
 def mainListen():
     while True:  
         x=listen().lower()
@@ -64,6 +65,11 @@ def mainListen():
             os.system("play "+located+" tempo 1.1")
             doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
             os.system("play "+doyou+" tempo 1.1")
+
+        elif "monitor" in x or "home" in x or "monitor my home" in x:
+            mt="Sounds/Alright-SirI-am-now-monitorin1620375220.mp3"
+            os.system("play "+mt+" tempo 1.1")
+            motion()
 
         else:
             icouldnot="Sounds/Sorry-I-could-not-do-that-at-1619638005.mp3"
