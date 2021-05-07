@@ -7,6 +7,7 @@ from age import age
 from getLocation import getLocation
 import gtts
 from motion import motion
+from cowin import vaccine_check
 def mainListen():
     while True:  
         x=listen().lower()
@@ -71,6 +72,13 @@ def mainListen():
             os.system("play "+mt+" tempo 1.1")
             motion()
             break
+        elif "vaccinations" in x or "vaccines" in x or "vaccinations have started" in x or "have vaccinations" in x:
+            ok_let_me_check="Sounds/OKLet-me-check1620390574.mp3"
+            os.system("play "+ok_let_me_check+" tempo 1.1")
+            time.sleep(0.5)
+            vaccine_check()
+            doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
+            os.system("play "+doyou+" tempo 1.1")
 
         else:
             icouldnot="Sounds/Sorry-I-could-not-do-that-at-1619638005.mp3"
