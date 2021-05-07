@@ -70,6 +70,7 @@ def mainListen():
             mt="Sounds/Alright-SirI-am-now-monitorin1620375220.mp3"
             os.system("play "+mt+" tempo 1.1")
             motion()
+            break
 
         else:
             icouldnot="Sounds/Sorry-I-could-not-do-that-at-1619638005.mp3"
