@@ -72,6 +72,7 @@ def mainListen():
             os.system("play "+mt+" tempo 1.1")
             motion()
             break
+        
         elif "vaccinations" in x or "vaccines" in x or "vaccinations have started" in x or "have vaccinations" in x:
             ok_let_me_check="Sounds/OKLet-me-check1620390574.mp3"
             os.system("play "+ok_let_me_check+" tempo 1.1")
