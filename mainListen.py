@@ -9,8 +9,10 @@ import gtts
 from motion import motion
 from em import emailer
 from vacc import vaccination
+from anim import *
+import threading
 def mainListen():
-    while True:  
+    while True:
         x=listen().lower()
         if "news" in x:
             if "india" in x:
