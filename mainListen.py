@@ -31,6 +31,8 @@ def mainListen():
             break
         
         elif "email" in x or "send email" in x or "send" in x or "send an email" in x:
+            alri="Sounds/Okay1620499210.mp3"
+            os.system("play "+alri+" tempo 1.1")
             emailer()
             doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
             os.system("play "+doyou+" tempo 1.1")

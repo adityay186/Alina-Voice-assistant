@@ -1,3 +1,4 @@
+import os
 import time
 import subprocess
 import smtplib
@@ -11,7 +12,8 @@ def mailer(receiver,message):
     s.sendmail("adityactms@gmail.com", receiver, message)
     s.quit()
     sendmessage()
-    speak("Mail has been sent.")
+    em="Sounds/The-email-has-been-sent1620499047.mp3"
+    os.system("play "+em+" tempo 1.1")
     print("Mail Sent")
 
 def sendmessage():
@@ -26,11 +28,13 @@ def contacts(rc):
     return cont[rc]
 
 def emailer():
-    speak("Alright, to whom do you want to send an email?")
+    al="Sounds/To-whom-do-you-want-to-send-an1620499811.mp3"
+    os.system("play "+al+" tempo 1.1")
     rec=listen().lower()
     for i in range(1):
         if "don't send" in rec or "stop" in rec or "no don't send" in rec:
-            speak("Alright.")
+            ok="Sounds/Okay1620499210.mp3"
+            os.system("play "+ok+" tempo 1.1")
             break
         
     else:
@@ -38,10 +42,13 @@ def emailer():
             em=contacts(str(rec))
             print(em)
         except KeyError:
-            speak("Sorry, I could not find the contact. Please try again.")
+            sorry="Sounds/SorryI-could-not-find-the-cont1620499348.mp3"
+            os.system("play "+sorry+" tempo 1.1")
             emailer()
         else:
-            speak("And, what is the message?")
+            sorry="Sounds/Andwhat-is-the-message1620499422.mp3"
+            os.system("play "+sorry+" tempo 1.1")
             m=listen().lower()
-            speak("Alright. I am sending the email")
+            semail="Sounds/AlrightI-am-sending-the-email1620499479.mp3"
+            os.system("play "+semail+" tempo 1.1")
             mailer(str(em),m)
