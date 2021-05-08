@@ -7,7 +7,8 @@ from age import age
 from getLocation import getLocation
 import gtts
 from motion import motion
-from cowin import vaccine_check
+from em import emailer
+
 def mainListen():
     while True:  
         x=listen().lower()
@@ -28,6 +29,11 @@ def mainListen():
             os.system("play "+exit+" tempo 1.1")
             # speak("Alright, Thank You for using this Voice Assistant, have a nice day.")
             break
+        
+        elif "email" in x or "send email" in x or "send" in x or "send an email" in x:
+            emailer()
+            doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
+            os.system("play "+doyou+" tempo 1.1")
 
         elif "time" in x:
             if "date" in x:
@@ -73,7 +79,7 @@ def mainListen():
             motion()
             break
         
-        elif "vaccinations" in x or "vaccines" in x or "vaccinations have started" in x or "have vaccinations" in x:
+        elif "vaccinations" in x or "vaccines" in x or "vaccinations have started" in x or "have vaccinations" in x or "vaccination" in x:
             ok_let_me_check="Sounds/OKLet-me-check1620390574.mp3"
             os.system("play "+ok_let_me_check+" tempo 1.1")
             time.sleep(0.5)
