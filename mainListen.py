@@ -8,7 +8,7 @@ from getLocation import getLocation
 import gtts
 from motion import motion
 from em import emailer
-
+from vacc import vaccination
 def mainListen():
     while True:  
         x=listen().lower()
@@ -85,7 +85,7 @@ def mainListen():
             ok_let_me_check="Sounds/OKLet-me-check1620390574.mp3"
             os.system("play "+ok_let_me_check+" tempo 1.1")
             time.sleep(0.5)
-            vaccine_check()
+            vaccination()
             doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
             os.system("play "+doyou+" tempo 1.1")
 
