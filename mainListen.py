@@ -9,8 +9,8 @@ import gtts
 from motion import motion
 from em import emailer
 from vacc import vaccination
-from anim import *
-import threading
+from music import playMusic
+
 def mainListen():
     while True:
         x=listen().lower()
@@ -31,6 +31,11 @@ def mainListen():
             os.system("play "+exit+" tempo 1.1")
             # speak("Alright, Thank You for using this Voice Assistant, have a nice day.")
             break
+
+        elif "music" in x or "play" in x or "play music" in x:
+            playMusic()
+            doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
+            os.system("play "+doyou+" tempo 1.1")
         
         elif "email" in x or "send email" in x or "send" in x or "send an email" in x:
             alri="Sounds/Okay1620499210.mp3"
