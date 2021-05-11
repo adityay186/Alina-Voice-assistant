@@ -9,7 +9,7 @@ import gtts
 from motion import motion
 from em import emailer
 from vacc import vaccination
-from music import playMusic
+from music import Music
 
 def mainListen():
     while True:
@@ -33,7 +33,8 @@ def mainListen():
             break
 
         elif "music" in x or "play" in x or "play music" in x:
-            playMusic()
+            music=Music()
+            music.main()
             doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
             os.system("play "+doyou+" tempo 1.1")
         
