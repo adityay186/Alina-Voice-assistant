@@ -1,7 +1,5 @@
 import requests
 import json
-import time
-from loading import loading
 import os
 from tele import sendTelegram
 
