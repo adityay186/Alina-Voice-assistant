@@ -32,7 +32,7 @@ def mainListen():
             # speak("Alright, Thank You for using this Voice Assistant, have a nice day.")
             break
 
-        elif "songs" in x or "play" in x or "play songs" in x or "play some songs" in x or "music" in x:
+        elif "songs" in x or "play songs" in x or "play some songs" in x or "music" in x:
             music=Music()
             music.main()
             doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
@@ -42,6 +42,15 @@ def mainListen():
             alri="Sounds/Okay1620499210.mp3"
             os.system("play "+alri+" tempo 1.1")
             emailer()
+            doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
+            os.system("play "+doyou+" tempo 1.1")
+
+        elif "radio" in x or "play radio" in x:
+            radi="Sounds/OkayPlaying-RadioEnjoy1621184618.mp3"
+            os.system("play "+radi+" tempo 1.1")
+            os.system("python3 radio.py")
+            it_was_so_good="Sounds/It-was-so-good1621184764.mp3"
+            os.system("play "+it_was_so_good+" tempo 1.1")
             doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
             os.system("play "+doyou+" tempo 1.1")
 
