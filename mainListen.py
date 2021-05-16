@@ -32,7 +32,7 @@ def mainListen():
             # speak("Alright, Thank You for using this Voice Assistant, have a nice day.")
             break
 
-        elif "songs" in x or "play" in x or "play songs" in x or "play some songs" in x:
+        elif "songs" in x or "play" in x or "play songs" in x or "play some songs" in x or "music" in x:
             music=Music()
             music.main()
             doyou="Sounds/Do-you-want-me-to-do-anything-1619637731.mp3"
